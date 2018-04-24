@@ -1,0 +1,23 @@
+1. This coed select all the entities from the table runners where the entity id runner is not in races. And it will then sort the result in ascending order i.e from A - Z.
+
+TERMS USED
+(i) 	SELECT : this statement is used to select data from a database.
+(ii)	* :	means all.
+(iii)	FROM : Indicate where to query the data from, usually associated with SELECT
+(iv)	WHERE : The WHERE clause is used to filter records. Sometimes The WHERE clause is used to extract only those 		records that fulfill a specified condition.
+(v)	NOT : The NOT operator displays a record if the condition(s) is NOT TRUE.
+(vi)	IN : Tis operator allows you to specify multiple values in a WHERE clause.
+(vii)	ORDER BY : The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+
+2. The Query will display a record of 15 records in all. Because the query have asterisk (*) which means all and in 	that case to retrieve all the records in the given tables.
+
+3. 	UPDATE SALARIES
+	SET Salary = '1500',
+	WHERE Sex = 'm' AND Sex = 'f';
+
+4. 	(i) The result will return error
+	(ii) Because in SQL query we don't use less than (<) sign and greater than (>) sign.
+	(iii) The best way to do it is like this:
+	
+	SELECT Name FROM Customers WHERE id = '2';
+	 
