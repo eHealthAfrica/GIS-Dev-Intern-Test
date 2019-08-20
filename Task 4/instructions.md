@@ -1,51 +1,31 @@
 # Task 4
 
-## Skills to be assessed
+## Skills to be assessed:
 
-* Ability to read and understand SQL queries
-* Ability to write SQL queries
-* Familiarity with SQL databases
+- Ability to code in Javascript
+- Ability to understand the problem definition
+- Approach to problem solving
+- Ability to implement clean and readable code
+- Ability to work with REST APIs
+- Ability to work with Geospatial client JS libraries
+- Ability to use a dependency manager
 
-### Challenge
-Complete the following:
+## Challenge
 
-1. The query in the file [understand.sql](understand.sql) In your own word explain what the query does. The use of sql related terms is required.
+eHealth Africa has different teams implementing projects across Africa and one of the challenges is keeping track of timezones across these countries that we have teams in. For anyone in the organization who is interested in knowing what the timezones of different African countries are, we want to implement a map based solution where all the countries in Africa are represented on the map and they are shaded/colored based on the timezones. This will enable the viewer, see all the countries that share the same timezone and know when to reach out accordingly to the team members working in those countries.
 
-2. Assume a schema of Emp ( Id, Name, DeptId ) , Dept ( Id, Name).
+## Additional Instructions
 
-    If there are 10 records in the Emp table and 5 records in the Dept table, how many rows will be displayed in the result of the following SQL query:
+1. The API at [REST COUNTRIES](https://restcountries.eu/) should be used to fetch the list countries in the Africa continent.
 
-    `Select * From Emp, Dept`
+    a. Information regarding the timezones and coordinates of the country can be gotten from the response gotten from the [REST COUNTRIES](https://restcountries.eu/) endpoints.
 
-    Explain your answer.
+2. The list of countries in Africa should also be represented on a HTML table with the following fields as columns: name, capital, population, timezones and flag (image).
 
-3. Given a table SALARIES, such as the one below, that has m = male and f = female values. Swap all f and m values (i.e., change all f values to m and vice versa) with a single update query and no intermediate temp table.
+    a. On table, countries that have timezone that are +1/-1 from the current user's timezone should have a row background color of green indicating that teams in that countries are in a closer timezone than the rest.
 
-    | Id  | Name | Sex | Salary |
-    | --- | ---- | --- | ------ |
-    | 1   | A    | m   | 2500   |
-    | 2   | B    | f   | 1500   |
-    | 3   | C    | m   | 5500   |
-    | 4   | D    | f   | 500    |
+3. If a country has more than one timezone, feel free to use any of the timezones as default.
 
-4. Given these contents of the Customers table:
+## Resources (that you may find helpful)
 
-    | Id  | Name          | ReferredBy |
-    | --- | ------------- | ---------- |
-    | 1   | John Doe      | NULL       |
-    | 2   | Jane Smith    | NULL       |
-    | 3   | A nne Jenkins | 2          |
-    | 4   | Eric Branford | NULL       |
-    | 5   | Pat Richards  | 1          |
-    | 6   | Alice Barnes  | 2          |
-
-Here is a query written to return the list of customers not referred by Jane Smith:
-
-SELECT Name FROM Customers WHERE ReferredBy <> 2;
-What will be the result of the query? Why? What would be a better way to write it?
-
-### NOTE: In the repo created in task (ONE). Create an sql folder containing results of this task
-
-### Resources (that you may find helpful)
-
-* [PostgreSQL Tutorial](http://www.postgresqltutorial.com/)
+- Leaflet 1.3.1 [Documentation](http://leafletjs.com/reference-1.3.0.html)
